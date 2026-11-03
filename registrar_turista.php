@@ -8,53 +8,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Turista</title>
+    <title>Crear cuenta | TRAVEL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
 
-<h1>Registrar Turista</h1>
+<body class="pagina-acceso">
 
-<form action="modelo/reg_turista.php" method="post">
+    <main class="acceso-layout">
 
-    <label>Id Turista:</label>
-    <input type="text" name="id_turista" required>
-    <br><br>
+        <section class="acceso-panel">
 
-    <label>Nombre:</label>
-    <input type="text" name="nombre_usuario" required>
-    <br><br>
+            <div class="acceso-contenido">
 
-    <label>Apellidos:</label>
-    <input type="text" name="apellidos_usuario" required>
-    <br><br>
+                <a href="index.php" class="marca-travel">
+                    TRAVEL<span>.</span>
+                </a>
 
-    <label>Correo:</label>
-    <input type="email" name="correo" required>
-    <br><br>
+                <div class="acceso-encabezado">
+                    <span class="acceso-etiqueta">ÚNETE A TRAVEL</span>
 
-    <label>Teléfono:</label>
-    <input type="text" name="telefono" required>
-    <br><br>
+                    <h1>Crea tu cuenta</h1>
 
-    <label>Contraseña:</label>
-    <input type="password" name="password" required>
-    <br><br>
+                    <p>
+                        Regístrate y comienza a descubrir nuevos destinos,
+                        experiencias y lugares de Santander.
+                    </p>
+                </div>
 
-    <label>Presupuesto:</label>
-    <input type="number" name="presupuesto" required>
-    <br><br>
+                <form action="modelo/reg_turista.php" method="post"
+                      class="formulario-acceso">
 
-    <label>Cuenta Google:</label>
-    <input type="text" name="cuenta_google">
-    <br><br>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-    <button type="submit">Registrar</button>
+                        <div class="campo-acceso">
+                            <label for="id_turista">Documento de identidad</label>
+                            <input type="text" id="id_turista"
+                                   name="id_turista" required>
+                        </div>
 
-</form>
+                        <div class="campo-acceso">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" id="telefono"
+                                   name="telefono" required>
+                        </div>
 
-<br><br>
+                        <div class="campo-acceso">
+                            <label for="nombre_usuario">Nombre</label>
+                            <input type="text" id="nombre_usuario"
+                                   name="nombre_usuario" required>
+                        </div>
 
-<a href="index.php">Volver al inicio de sesión</a>
+                        <div class="campo-acceso">
+                            <label for="apellidos_usuario">Apellidos</label>
+                            <input type="text" id="apellidos_usuario"
+                                   name="apellidos_usuario" required>
+                        </div>
+
+                    </div>
+
+                    <div class="campo-acceso">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo"
+                               name="correo" required>
+                    </div>
+
+                    <div class="campo-acceso">
+                        <label for="cuenta_google">Cuenta Google</label>
+                        <input type="text" id="cuenta_google"
+                               name="cuenta_google">
+                    </div>
+
+                    <div class="campo-acceso">
+                        <label for="presupuesto">Presupuesto</label>
+                        <input type="number" id="presupuesto"
+                               name="presupuesto" min="0" required>
+                    </div>
+
+                    <div class="campo-acceso">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password"
+                               name="password" required>
+                    </div>
+
+                    <button type="submit" class="boton-acceso">
+                        Crear cuenta
+                    </button>
+
+                </form>
+
+                <p class="acceso-pie">
+                    ¿Ya tienes una cuenta?
+                    <a href="index.php">Inicia sesión</a>
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="acceso-visual">
+            <div class="visual-capa"></div>
+            <div class="acceso-visual-contenido">
+                <span>DESCUBRE SANTANDER</span>
+                <h2>Tu próxima experiencia comienza aquí.</h2>
+                <p>
+                    Explora destinos, conoce lugares especiales
+                    y descubre nuevas formas de viajar.
+                </p>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 </html>
